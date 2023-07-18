@@ -1,4 +1,3 @@
-import logging
 import os
 
 import openai
@@ -19,4 +18,4 @@ chat_completion = openai.ChatCompletion.create(
     ],
 )
 
-logging.info(chat_completion)
+print(chat_completion["choices"][0]["message"]["content"])
