@@ -17,3 +17,5 @@ build/
 
 .env
 /text/
+/data/raw/
+/data/

@@ -6,6 +6,7 @@ x-env-vol: &env-vol
     - .env
   volumes:
     - ./script:/home/script
+    - ./data:/home/data
 
 
 services:

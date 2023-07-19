@@ -25,3 +25,4 @@ RUN pip install --requirement /tmp/requirements.txt
 FROM install_dependencies AS move_files
 COPY .env .env
 COPY script /home/script
+COPY data /home/data
