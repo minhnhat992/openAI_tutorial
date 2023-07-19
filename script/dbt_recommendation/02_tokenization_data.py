@@ -32,6 +32,6 @@ df["n_tokens"] = df.combined.apply(lambda x: len(tokenizer.encode(x)))
 df.n_tokens.describe()
 
 # create embeddings and save them for future use
-df["embedding"] = df.combined.apply(lambda x: get_embedding(x, engine=embedding_model))
+df["embeddings"] = df.combined.apply(lambda x: get_embedding(x, engine=embedding_model))
 
 df.to_csv(processed_path + "dbt_manifest_embeddings.csv")
