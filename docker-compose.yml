@@ -1,0 +1,22 @@
+version: '3.7'
+
+# set extension field to reuse in services
+x-env-vol: &env-vol
+  env_file:
+    - .env
+  volumes:
+    - ./script:/home/script
+
+
+services:
+  openai_py_console:
+    build:
+      # as dockerfile is put 2 layers deep,
+      # set context to the relative path from outermost folder DataTeamImportEngine
+      # this allows COPY to work, without referencing the full folder path
+      dockerfile: Dockerfile
+    tty: true
+    image: openai_embedding_image
+    container_name: openai_embedding
+    command: [ "python" ]
+    <<: *env-vol
