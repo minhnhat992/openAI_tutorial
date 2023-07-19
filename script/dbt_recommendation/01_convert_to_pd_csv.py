@@ -1,4 +1,4 @@
-# to clean up raw data from json dbt artifacts
+# to import raw data then convert to csv
 # https://docs.getdbt.com/reference/artifacts/manifest-json
 import json
 
